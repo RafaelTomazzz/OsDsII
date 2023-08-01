@@ -1,0 +1,7 @@
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.AssemblyReference.cache
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfoInputs.cache
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfo.cs
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.CoreCompileInputs.cache
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\etechas\OSDII\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cache
