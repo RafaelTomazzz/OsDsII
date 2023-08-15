@@ -8,7 +8,7 @@ namespace OsDsII.api.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {}
 
-        public DbSet<Customer> Custumers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Customer>()
