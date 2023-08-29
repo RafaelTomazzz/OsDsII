@@ -10,6 +10,7 @@ namespace OsDsII.api.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly DataContext _context;
+        private readonly ICustomersService _customersRepository;
 
         public CustomersController(DataContext context)
         {
@@ -22,7 +23,7 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                List<Customer> lista = await _context.Customers.ToListAsync();
+                IEnumerable<Customer> lista = await _context.Customers.GetAllCustomerAsync();
                 return Ok(lista);
             }
 
@@ -49,14 +50,12 @@ namespace OsDsII.api.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Post(Customer novoCustomer)
+        public async Task<IActionResult> CreateCustumer([FromBody]Customer novoCustomer)
         {
             try
             {
-                await _context.Customers.AddAsync(novoCustomer);
-                await _context.SaveChangesAsync();
-
-                return Ok(novoCustomer);
+                Customer currentCustumer = await _context.CustomersService.CreateCustomerAsync(customer);
+                
             }
             catch (System.Exception ex)
             {
