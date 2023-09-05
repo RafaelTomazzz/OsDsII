@@ -1,12 +1,14 @@
+using Microsoft.AspNetCore.Mvc;
 using OsDsII.api.Models;
 
-namespace OsDsII.api.Repositories.Interface 
+namespace OsDsII.api.Repositories.Interfaces
 {
-    public interface ICustomerReposytory
+    public interface ICustomersRepository
     {
+        public Task<IEnumerable<Customer>> GetAllCustomersAsync();
         public Task<Customer> GetCustomerByIdAsync(int id);
-        public Task<IEnumerable<Customer>> GetCustomerReposytoryAsync();
-        
-        public Task CreateCustomer(Customer customer);
-    }    
+        public Task<Customer> GetCustomerByEmailAsync(string email);
+        public Task CreateCustomerAsync(Customer customer);
+        public Task RemoveCustomer(Customer customer);
+    }
 }

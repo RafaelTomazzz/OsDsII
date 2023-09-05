@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OsDsII.api.Unit Of Work
+namespace OsDsII.api.UnitOFWork
 {
-    public class IUnitOfWork
+    public interface IUnitOfWork
     {
-        
+        public Task SaveChangesAsync();
     }
 }

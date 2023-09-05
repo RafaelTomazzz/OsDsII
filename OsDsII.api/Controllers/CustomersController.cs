@@ -27,7 +27,7 @@ namespace OsDsII.api.Controllers
                 return Ok(lista);
             }
 
-            catch (System.Exception ex)
+            catch (BaseException ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -42,7 +42,7 @@ namespace OsDsII.api.Controllers
                 Customer a = await _context.Customers.FirstOrDefaultAsync(aBusca => aBusca.Id == id);
                 return Ok(a);   
             }
-            catch (System.Exception ex)
+            catch (BaseException ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -57,7 +57,7 @@ namespace OsDsII.api.Controllers
                 Customer currentCustumer = await _context.CustomersService.CreateCustomerAsync(customer);
                 
             }
-            catch (System.Exception ex)
+            catch (BaseException ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -76,7 +76,7 @@ namespace OsDsII.api.Controllers
                 int linhaAfetadas = await _context.Customers.CountAsync();
                 return Ok(linhaAfetadas);
             }
-            catch (System.Exception ex)
+            catch (BaseException ex)
             {
                 return BadRequest(ex.Message);
             }

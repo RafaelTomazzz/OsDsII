@@ -1,14 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using OsDsII.api.Models;
 
-namespace OsDsII.api.Services.Customers
+namespace OsDsII.api.Services
 {
-    public class ICustomersService
+    public interface ICustomersService
     {
-        public Task<IEnumerable<Customer>> GetCustomerReposytoryAsync();
-        public Task CreateCustomerAsync(Customer customer);
-        
+        public Task<IEnumerable<Customer>> GetAllCustomersAsync();
+
+        public Task<Customer> GetCustomerByIdAsync(int id);
+
+        public Task<Customer> CreateCustomerAsync(Customer customer);
+
+        public Task<Customer> UpdateCustomerAsync(int id, Customer customer);
+
+        public Task<Customer> DeleteCustomerAsync(int id, Customer customer);
     }
 }

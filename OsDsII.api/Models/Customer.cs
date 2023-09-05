@@ -6,16 +6,16 @@ using Microsoft.EntityFrameworkCore;
 namespace OsDsII.api.Models
 {
     [Index(nameof(Email), IsUnique = true)]
-    [Index(nameof(Id), IsUnique = true)]
     [PrimaryKey(nameof(Id))]
     [Table("customer")]
-    public class Customer
+
+    public class Customer 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
-        public int Id { get; set; }
-
+        public int Id {get; set;}
+        
         [Required]
         [StringLength(60)]
         [Column("name")]
@@ -23,14 +23,14 @@ namespace OsDsII.api.Models
         public string Name { get; set; }
 
         [Required]
-        [StringLength(60)]
+        [StringLength(100)]
         [Column("email")]
         [NotNull]
         public string Email { get; set; }
 
         [Column("phone")]
         [StringLength(20)]
+        [Required]
         public string Phone { get; set; }
-
     }
 }
